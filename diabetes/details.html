@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+     <link href="./static/css/form.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!--<title>Responsive Regisration Form </title>-->
+    <script src="form.js" async charset="UTF-8"></script>
+</head>
+<body>
+    <div class="form">
+    <div class="container">
+        <header>Registration</header>
+
+        <form action="{{ url_for('predict')}}"method="post">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Patient Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Number of Pregnancies</label>
+                            <input type="text" name="pregnancies" placeholder="Number of Pregnancies" value="0.0" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Glucose Level</label>
+                            <input type="text" name="glucose" placeholder="Enter Glucose Level" value="0.0" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>BloodPressure value</label>
+                            <input type="text" name="bpressure" placeholder="Enter BloodPressure value" value="0.0" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>SkinThickness value</label>
+                            <input type="text" name="skinfold" placeholder="Enter SkinThickness value" value="0.0" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Insulin Level</label>
+                            <input type="text" name="insulin" placeholder="Enter Insulin Level" value="0.0" required>
+                        </div>
+                        <div class="input-field">
+                            <label>BMI value</label>
+                            <input type="text" name="bmi" placeholder="Enter BMI value" value="0.0" required>
+                        </div>
+                        <div class="input-field">
+                            <label>DiabetesPedigreeFunction</label>
+                            <input type="text" name="pedigree" placeholder="DiabetesPedigreeFunction" value="0.0" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Age</label>
+                            <input class="age" name="age" type="text" placeholder="Enter your age" value="0.0" required>
+                        </div>
+                        
+                        <button class="sumbit">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                </div> 
+            </div>
+        </form>
+        <br>
+   {{ prediction_text }}
+
+        <br>
+    </div>
+    </div>
+    
